@@ -1,0 +1,33 @@
+from setuptools import setup, find_packages
+
+setup(
+    name='qwen3-asr-toolkit',
+    version='1.0.4',
+    packages=find_packages(),
+    include_package_data=True,
+    install_requires=[
+        'openai',
+        'librosa',
+        'soundfile',
+        'silero_vad',
+        'tqdm',
+        'numpy',
+        'srt'
+    ],
+    entry_points={
+        'console_scripts': [
+            'qwen3-asr=qwen3_asr_toolkit.call_api:main'
+        ]
+    },
+    author='He Wang',
+    author_email='hwang2001@mail.nwpu.edu.cn',
+    description='Python toolkit for Qwen3-ASR via a local llama.cpp server — parallel high‑throughput calls, robust long‑audio transcription, multi‑sample‑rate support.',
+    long_description=open('README.md').read(),
+    long_description_content_type='text/markdown',
+    url='https://github.com/QwenLM/Qwen3-ASR-Toolkit',
+    classifiers=[
+        'Programming Language :: Python :: 3',
+        'Operating System :: OS Independent',
+    ],
+    python_requires='>=3.8',
+)

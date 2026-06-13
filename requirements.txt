@@ -1,0 +1,10 @@
+openai
+librosa
+silero_vad
+soundfile
+tqdm
+setuptools
+wheel
+requests
+urllib
+srt
